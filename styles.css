@@ -1,0 +1,694 @@
+/* Reset e Estilos Gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #ff4500;
+  --secondary-color: #0066cc;
+  --dark-color: #333;
+  --light-color: #f4f4f4;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --max-width: 1200px;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--dark-color);
+  background-color: #fff;
+}
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+}
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #e03e00;
+}
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+.btn-secondary:hover {
+  background-color: #0055aa;
+}
+.btn-white {
+  background-color: white;
+  color: var(--dark-color);
+}
+.btn-white:hover {
+  background-color: #f0f0f0;
+} /* Header */
+header {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+.logo span {
+  color: var(--primary-color);
+}
+.nav-menu {
+  display: flex;
+}
+.nav-menu li {
+  margin: 0 15px;
+}
+.nav-menu a {
+  font-weight: 600;
+  position: relative;
+  padding: 5px 0;
+}
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+  width: 100%;
+}
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+.header-icons a {
+  margin-left: 20px;
+  font-size: 1.2rem;
+  position: relative;
+}
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 0.7rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../E-commerce-SportMax/Assets/Banner-basqute.jpg') no-repeat center
+      center/cover;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Categories Section */
+.categories {
+  padding: 80px 0;
+}
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.category-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+.category-card:hover {
+  transform: translateY(-10px);
+}
+.category-card img {
+  width: 100%;
+  height: 20px;
+  object-fit: cover;
+}
+.category-card h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(119, 118, 118, 0.445);
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+/* Products Section */
+.products {
+  padding: 80px 0;
+  background-color: var(--light-color);
+}
+.product-filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px 10px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.product-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-10px);
+}
+.product-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.product-badge.sale {
+  background-color: var(--danger-color);
+}
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+.product-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.product-rating {
+  color: #ffc107;
+  margin-bottom: 10px;
+}
+.product-rating span {
+  color: var(--dark-color);
+  margin-left: 5px;
+}
+.product-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+.view-more {
+  text-align: center;
+  margin-top: 50px;
+}
+/* Special Offers */
+.special-offers {
+  padding: 80px 0;
+}
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.offer-card {
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../E-commerce-SportMax/Assets/colecao-verao.png') no-repeat center
+      center/cover;
+}
+.offer-card:nth-child(2) {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../E-commerce-SportMax/Assets/equipamento.png') no-repeat center
+      center/cover;
+}
+.offer-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 80%;
+}
+.offer-content h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.offer-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+/* Testimonials */
+.testimonials {
+  padding: 80px 0;
+  background-color: var(--light-color);
+}
+.testimonials-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 250px;
+}
+.testimonial-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.testimonial-card.active {
+  opacity: 1;
+}
+.testimonial-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.testimonial-content p {
+  font-style: italic;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
+.testimonial-author img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.testimonial-author h4 {
+  margin-bottom: 5px;
+}
+.testimonial-rating {
+  color: #ffc107;
+}
+.testimonial-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.testimonial-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--dark-color);
+  padding: 0 15px;
+}
+.testimonial-dots {
+  display: flex;
+  margin: 0 20px;
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.dot.active {
+  background-color: var(--primary-color);
+}
+/* Newsletter */
+.newsletter {
+  padding: 80px 0;
+  background-color: var(--secondary-color);
+  color: white;
+}
+.newsletter-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.newsletter h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.newsletter p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+.form-group {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.form-group input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 1rem;
+}
+.form-group button {
+  border-radius: 0 5px 5px 0;
+}
+.form-message {
+  margin-top: 15px;
+  font-weight: 600;
+}
+/* Footer */
+footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 80px 0 20px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+.footer-col h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.footer-col h4 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+.footer-col p {
+  margin-bottom: 20px;
+}
+.social-icons {
+  display: flex;
+}
+.social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  margin-right: 10px;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+.social-icons a:hover {
+  background-color: var(--primary-color);
+}
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: white;
+}
+.contact-info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+.contact-info li i {
+  margin-right: 10px;
+  color: var(--primary-color);
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.payment-methods i {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  color: #ccc;
+}
+/* Responsividade */
+@media (max-width: 1024px) {
+  .categories-grid,
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .header-icons {
+    display: none;
+  }
+
+  .nav-menu .mobile-icons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 16px;
+  }
+
+  .nav-menu .mobile-icons a {
+    font-size: 1.5rem;
+    color: var(--dark-color);
+  }
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    background-color: white;
+    width: 100%;
+    height: calc(100vh - 70px);
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    transition: left 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .nav-menu li {
+    margin: 15px 0;
+  }
+  .hero {
+    background: (rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('../E-commerce-SportMax/Assets/Banner-basqute.jpg') no-repeat left
+        center/cover;
+  }
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+  .categories-grid,
+  .products-grid,
+  .offers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-buttons .btn {
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 250px;
+  }
+}
+@media (max-width: 576px) {
+  .categories-grid,
+  .products-grid,
+  .offers-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .form-group {
+    flex-direction: column;
+  }
+  .form-group input,
+  .form-group button {
+    width: 100%;
+    border-radius: 5px;
+  }
+  .form-group button {
+    margin-top: 10px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-bottom p {
+    margin-bottom: 15px;
+  }
+  .product-filters {
+    flex-direction: column;
+    align-items: center;
+  }
+  .filter-btn {
+    margin-bottom: 10px;
+    width: 80%;
+  }
+}
+@media (max-width: 400px) {
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(146, 143, 143, 0.6)),
+      url('../E-commerce-SportMax/Assets/Banner-basqute.jpg') no-repeat right
+        center/cover;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .newsletter h2 {
+    font-size: 1.5rem;
+  }
+  .newsletter p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 769px) {
+  .mobile-icons {
+    display: none;
+  }
+}
