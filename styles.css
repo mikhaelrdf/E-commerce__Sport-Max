@@ -161,7 +161,7 @@ header .container {
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../E-commerce-SportMax/Assets/Banner-basqute.jpg') no-repeat center
+    url('Assets/Banner-basqute.jpg') no-repeat center
       center/cover;
   color: white;
   padding: 100px 0;
@@ -327,12 +327,12 @@ header .container {
   overflow: hidden;
   position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('../E-commerce-SportMax/Assets/colecao-verao.png') no-repeat center
+    url('Assets/colecao-verao.png') no-repeat center
       center/cover;
 }
 .offer-card:nth-child(2) {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('../E-commerce-SportMax/Assets/equipamento.png') no-repeat center
+    url('Assets/equipamento.png') no-repeat center
       center/cover;
 }
 .offer-content {
@@ -603,7 +603,7 @@ footer {
   }
   .hero {
     background: (rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url('../E-commerce-SportMax/Assets/Banner-basqute.jpg') no-repeat left
+      url('Assets/Banner-basqute.jpg') no-repeat left
         center/cover;
   }
   .hero h2 {
@@ -670,7 +670,7 @@ footer {
 @media (max-width: 400px) {
   .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(146, 143, 143, 0.6)),
-      url('../E-commerce-SportMax/Assets/Banner-basqute.jpg') no-repeat right
+      url('Assets/Banner-basqute.jpg') no-repeat right
         center/cover;
   }
 
