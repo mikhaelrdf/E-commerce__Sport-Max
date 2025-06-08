@@ -28,9 +28,3 @@ E-commerce Sport-Max é uma loja virtual voltada para a venda de **equipamentos 
 -- 📧 mikhaelrdf2@gmail.com
 -- 📱 (27) 99577-1584
 
-## 📁 Como Rodar Localmente
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/ecommerce-sport-max.git
-   ```
